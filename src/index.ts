@@ -14,7 +14,7 @@ app.use(cors({
   ],
   credentials: true
 }));
-
+app.options("*", cors());
 app.use("/api", router);
 
 // app.post("/api/auth/login", (req, res) => {
@@ -23,4 +23,6 @@ app.use("/api", router);
 //   });
 // });
 
-module.exports = app;
+// module.exports = app;
+
+export default app;
