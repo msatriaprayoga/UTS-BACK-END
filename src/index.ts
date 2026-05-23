@@ -19,8 +19,4 @@ app.post("/api/auth/login", (req, res) => {
   });
 });
 
-app.post("/api/auth/dashboard", (req, res) => {
-
-});
-
 module.exports = app;
