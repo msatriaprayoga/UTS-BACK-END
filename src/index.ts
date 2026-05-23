@@ -1,3 +1,5 @@
+import routes from './routes/index';
+
 const express = require("express");
 const cors = require("cors");
 
@@ -13,23 +15,12 @@ app.use(cors({
   credentials: true
 }));
 
-app.post("/api/auth/login", (req, res) => {
-  res.json({
-    message: "Login berhasil"
-  });
-});
+app.use("/api", router);
 
-app.get("/api/pembicara", (req, res) => {
-  res.json({ message: "List pembicara" });
-});
-
-app.get("/api/events", (req, res) => {
-  res.json({ message: "List events" });
-});
-
-app.get("/api/categories", (req, res) => {
-  res.json({ message: "List categories" });
-});
-
+// app.post("/api/auth/login", (req, res) => {
+//   res.json({
+//     message: "Login berhasil"
+//   });
+// });
 
 module.exports = app;
