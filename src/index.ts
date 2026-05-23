@@ -13,9 +13,6 @@ app.use(cors({
   credentials: true
 }));
 
-const routes = require("./routes");
-app.use("/api", routes);
-
 app.post("/api/auth/login", (req, res) => {
   res.json({
     message: "Login berhasil"
