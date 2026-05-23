@@ -6,7 +6,6 @@ import routes from './routes/index';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
 
 app.use(cors({
   origin: (origin, callback) => {
@@ -22,7 +21,7 @@ app.use(cors({
   },
   credentials: true,
 }));
-app.options('*', cors()); 
+app.options('*', cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -32,8 +31,5 @@ app.get('/health', (_req, res) => {
 
 app.use('/api', routes);
 
-app.listen(PORT, () => {
-  console.log(`Server Berjalan di port ${PORT}`);
-});
-
-module.exports = app;
+// Hapus app.listen, ganti dengan export default
+export default app;
