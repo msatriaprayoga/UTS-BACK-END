@@ -27,7 +27,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/health', (_req, res) => {
-  res.json({ status: 'ok', message: 'Event Management API is running' });
+  res.json({ status: 'ok', message: 'API is running' });
 });
 
 app.use('/api', routes);
@@ -36,4 +36,4 @@ app.listen(PORT, () => {
   console.log(`Server Berjalan di port ${PORT}`);
 });
 
-export default app;
+module.exports = app;
