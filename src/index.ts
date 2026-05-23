@@ -14,7 +14,7 @@ app.use(cors({
 }));
 
 // IMPORT ROUTES
-const routes = require("../routes"); 
+const routes = require("../routes/index.ts"); 
 app.use("/api", routes);
 
 // app.post("/api/auth/login", (req, res) => {
