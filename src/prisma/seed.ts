@@ -6,7 +6,6 @@ const prisma = new PrismaClient();
 async function main() {
   console.log(' Seeding database...');
 
-  // User default: Denta
   const hashedPassword = await bcrypt.hash('admin123', 10);
   await prisma.user.upsert({
     where: { nim: '24090108' },
