@@ -10,19 +10,8 @@ app.use(cors({
     "http://localhost:5173",
     "https://uts-front-end-six.vercel.app"
   ],
-
-  if (!origin || allowed.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Blocked by CORS"));
-    }
-  },
- methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
 }));
-
-app.options("*", cors());
 
 // IMPORT ROUTES
 const routes = require("../routes"); 
