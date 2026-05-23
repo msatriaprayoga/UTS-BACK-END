@@ -19,4 +19,17 @@ app.post("/api/auth/login", (req, res) => {
   });
 });
 
+app.get("/api/pembicara", (req, res) => {
+  res.json({ message: "List pembicara" });
+});
+
+app.get("/api/events", (req, res) => {
+  res.json({ message: "List events" });
+});
+
+app.get("/api/categories", (req, res) => {
+  res.json({ message: "List categories" });
+});
+
+
 module.exports = app;
