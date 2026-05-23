@@ -13,12 +13,14 @@ app.use(cors({
   credentials: true
 }));
 
-// app.post("/api/auth/login", (req, res) => {
-//   res.json({
-//     message: "Login berhasil"
-//   });
-// });
+app.post("/api/auth/login", (req, res) => {
+  res.json({
+    message: "Login berhasil"
+  });
+});
 
-app.use('/api', routes);
+app.post("/api/auth/dashboard", (req, res) => {
+
+});
 
 module.exports = app;
