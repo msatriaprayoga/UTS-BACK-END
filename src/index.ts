@@ -21,6 +21,4 @@ app.post("/api/auth/login", (req, res) => {
   });
 });
 
-// module.exports = app;
-
 export default app;
