@@ -15,7 +15,7 @@ app.use(cors({
   credentials: true
 }));
 app.options("*", cors());
-app.use("/api", router);
+// app.use("/api", router);
 
 app.post("/api/auth/login", (req, res) => {
   res.json({
