@@ -17,11 +17,11 @@ app.use(cors({
 app.options("*", cors());
 app.use("/api", router);
 
-// app.post("/api/auth/login", (req, res) => {
-//   res.json({
-//     message: "Login berhasil"
-//   });
-// });
+app.post("/api/auth/login", (req, res) => {
+  res.json({
+    message: "Login berhasil"
+  });
+});
 
 // module.exports = app;
 
