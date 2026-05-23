@@ -1,9 +1,12 @@
-const express = require("express");
-const cors = require("cors");
+import express from 'express';
+import cors from 'cors';
+import dotenv from 'dotenv';
+import routes from './routes/index';
+
+dotenv.config();
 
 const app = express();
-
-app.use(express.json());
+const PORT = process.env.PORT || 5000;
 
 app.use(cors({
   origin: (origin, callback) => {
@@ -28,6 +31,10 @@ app.get('/health', (_req, res) => {
 });
 
 app.use('/api', routes);
+
+app.listen(PORT, () => {
+  console.log(`Server Berjalan di port ${PORT}`);
+});
 
 // app.post("/api/auth/login", (req, res) => {
 //   res.json({
